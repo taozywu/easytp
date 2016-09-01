@@ -3,6 +3,7 @@ this is tp's framework base on ThinkPHP!
 
 # 目录结构
 
+```
 Your Work
   ++++Core             
           ++++Apps                    应用目录【支持多应用】
@@ -24,18 +25,21 @@ Your Work
            ----Statics                     纯静态资源【方便CDN】
   ----home.php                          入口文件
 
+```
 # Apps 目录结构【eg.Home】
 
+```
 Home
    ++++Conf                            Home应用配置
    ++++Controller                        Home应用控制器
    ++++Logic                            Home应用逻辑模型
    ++++Model                           Home应用数据模型 
    ++++View                            Home应用视图
-
+```
 
 # 路由URL
 
+```
 针对前端网站（客户浏览）来讲 我们要讲究url访问方式对搜索引擎友好方式采用（pathinfo、rewrite等）
 =>Localhost.com/index.php/index/index/index
 
@@ -44,10 +48,11 @@ Home
 
 
 获取参数 你阔以继续使用I()函数来获取；也阔以$this->_getParam()来获取【此是zendframework方式】
-
+```
 
 # 入口文件
 
+```
 <?php
 
 /**
@@ -74,10 +79,11 @@ require(THINK_PATH."/ThinkPHP.php");
 注意
 1. 常量定义请在Core/Conf/define.php去添加即可。
 2. BIND_MODULE必须指定。
-
+```
 
 # 控制器/模型
 
+```
 <?php
 
 namespace Home\Controller;
@@ -98,10 +104,11 @@ class HomeController extends BaseWebController
 注意
 1.所有方法尽量统一：方法名+Action
 2.选用基类控制器根据是WEB，ADMIN等。
-
+```
 
 # AJAX处理
 
+```
 <?php
 
 $data = array();
@@ -113,12 +120,13 @@ $this->ajaxReturn(array("error_code" => 0, "msg" => "", "data" => array("html" =
 注意
 1.统一返回格式
 2.提前统一code码
-
+```
 
 
 # 模型
 
-4.2.1业务模型
+```
+1.业务模型
 尽量使用单例模式以减少频繁实例化类
 <?php
 
@@ -163,7 +171,7 @@ class DemoLogic {
 $data = DemoLogic::getInstance()->getPageData($page, $pageSize, $where); 
 
 
-# 数据模型
+2.数据模型
 
 <?php
 
@@ -184,11 +192,12 @@ class DemoModel extends BaseModel {
 在业务模型中调用如下：
 $this->_demoObj = new \Home\Model\DemoModel();
 return $this->_demoObj->addData($params); 
-
+```
 
 
 # DB操作
 
+```
 你阔以继续使用手册推荐的不论是CURD，拼接，原生都是可行的。因个人爱好原生方式，故对此作了一些封装，同时兼容zendframework操作DB大部分写法等。
 
 
@@ -220,10 +229,11 @@ interface BaseInterface {
     
     public function delete($tableName,$whereParams = array());
 }
-
+```
 
 # 模板
 
+```
 模板文件中引入模板文件如下几种方法：
 假定项目视图目录是在Core/Apps/Admin/View
 模板文件a：Demo1/a.html
@@ -251,7 +261,7 @@ Index.html
 <block name="title">首页 - </block>
 
 <include file="Public:footer" />
-
+```
 
 # 其他
 
