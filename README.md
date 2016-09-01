@@ -26,7 +26,7 @@ Your Work
   ----home.php                          入口文件
 
 ```
-# Apps 目录结构【eg.Home】
+# Apps 目录结构
 
 ```
 Home
