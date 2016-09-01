@@ -7,34 +7,34 @@ this is tp's framework base on ThinkPHP!
 Your Work
   ++++Core             
           ++++Apps                    应用目录【支持多应用】
-          ++++Common                 全局函数
-          ++++Conf                     全局配置
-          ++++Ext                       全局扩展库
-          ++++ThinkPHP                 TP核心框架
+          ++++Common                  全局函数
+          ++++Conf                    全局配置
+          ++++Ext                     全局扩展库
+          ++++ThinkPHP                TP核心框架
                      ----Library
-                            ----Ccc      框架封装 
+                            ----Ccc   框架封装 
   ++++Data
       ++++Temp
                ----Cache
                ----Data
-               ----Html                  HTML_CACHE_ON，静态文件会存放在此.
+               ----Html               HTML_CACHE_ON，静态文件会存放在此.
                ----Logs
                ----Temp
   ++++Public
-           ----Home                     Home应用资源
-           ----Statics                     纯静态资源【方便CDN】
-  ----home.php                          入口文件
+           ----Home                   Home应用资源
+           ----Statics                纯静态资源【方便CDN】
+  ----home.php                        入口文件
 
 ```
 # Apps 目录结构
 
 ```
 Home
-   ++++Conf                            Home应用配置
-   ++++Controller                        Home应用控制器
-   ++++Logic                            Home应用逻辑模型
-   ++++Model                           Home应用数据模型 
-   ++++View                            Home应用视图
+   ++++Conf                           Home应用配置
+   ++++Controller                     Home应用控制器
+   ++++Logic                          Home应用逻辑模型
+   ++++Model                          Home应用数据模型 
+   ++++View                           Home应用视图
 ```
 
 # 路由URL
