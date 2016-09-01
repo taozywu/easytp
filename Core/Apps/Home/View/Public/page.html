@@ -1,0 +1,15 @@
+<?php if( $pageData[ 'page_count' ] <= 1 || $pageData[ 'page' ] <= 1 ):?>
+    首页 | 上一页
+<?php else: ?>
+    <a href="<?= $pageData[ 'url' ] ?>&page=1">首页</a> | 
+    <a href="<?= $pageData[ 'url' ] ?>&page=<?php echo $pageData[ 'page' ] - 1 ; ?>">上一页</a>
+<?php endif ; ?>
+    <input type="text" size="2" maxlength="7" value="<?= $pageData[ 'page' ] ?>" onblur="pageGo(this.value);"/>
+    共 <?= $pageData[ 'page_count' ] ?> 页
+<?php if( $pageData[ 'page' ] == $pageData[ 'page_count' ] || $pageData[ 'page_count' ] < 1 ): ?>
+    下一页 | 尾页
+<?php else: ?>
+    <a href="<?= $pageData[ 'url' ] ?>&page=<?php echo $pageData[ 'page' ] + 1 ; ?>">下一页</a> | 
+    <a href="<?= $pageData[ 'url' ] ?>&page=<?= $pageData[ 'page_count' ] ?>">尾页</a>
+<?php endif ; ?>
+<script type="text/javascript">function pageGo(page){window.location="<?= $pageData['url'] ?>&page=" + page;}</script>
