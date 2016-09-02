@@ -98,7 +98,7 @@ class HomeController extends BaseWebController
     public function __construct()
     {
         parent::__construct();
-}
+    }
 }
 
 注意
@@ -162,7 +162,7 @@ class DemoLogic {
         }
          
         return self::$_singletonObject [$className];
-}
+    }
 }
 
 在控制器端调用如下：
@@ -185,7 +185,7 @@ class DemoModel extends BaseModel {
 
     public function __construct() {
         parent::__construct();
-}
+    }
 }
 
 在业务模型中调用如下：
