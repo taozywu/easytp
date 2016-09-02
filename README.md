@@ -157,8 +157,7 @@ class DemoLogic {
     public static function getInstance() {
         $className = __CLASS__;
          
-        if (!isset(self::$_singletonObject [$className])
-|| !self::$_singletonObject [$className]) {
+        if (!isset(self::$_singletonObject [$className]) || !self::$_singletonObject [$className]) {
             self::$_singletonObject [$className] = new self ();
         }
          
