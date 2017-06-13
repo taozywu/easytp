@@ -130,8 +130,9 @@ $this->ajaxReturn(array("error_code" => 0, "msg" => "", "data" => array("html" =
 # 模型
 
 
-1. 业务模型   
-尽量使用单例模式以减少频繁实例化类
+1. 业务模型
+
+> 尽量使用单例模式以减少频繁实例化类
 
 ```
 <?php
@@ -172,7 +173,7 @@ class DemoLogic {
 }
 ```
 
-* 在控制器端调用如下：
+* 在控制器端调用如下：   
 
 $data = DemoLogic::instance()->getPageData($page, $pageSize, $where); 
 
@@ -198,7 +199,7 @@ class DemoModel extends BaseModel {
 
 ```
 
-* 在业务模型中调用如下：
+* 在业务模型中调用如下：   
 $this->_demoObj = new \Home\Model\DemoModel();
 return $this->_demoObj->addData($params); 
 
