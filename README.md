@@ -250,10 +250,13 @@ interface BaseInterface {
 3. 模板文件b：Demo2/b.html
 
 #模板文件a中引入模板文件b#   
-1. '<?php include T("Demo2/b")?> （如果引入模板文件c：<?php include T("Demo3/c")?> ）'
-2. '<include file="Demo2/b" />（如果引入模板文件c：<include file="c" />）'
-3. '<include file="Demo2:b" />'
-4. '<include file="/Core/Apps/Admin/View/Demo2/b.html" />'
+
+```
+1. <?php include T("Demo2/b")?> （如果引入模板文件c：<?php include T("Demo3/c")?> ）
+2. <include file="Demo2/b" />（如果引入模板文件c：<include file="c" />）
+3. <include file="Demo2:b" />
+4. <include file="/Core/Apps/Admin/View/Demo2/b.html" />
+```
 
 TIPS：   
 1. 模板文件含变量均会做处理。
