@@ -244,12 +244,12 @@ interface BaseInterface {
 # 模板
 
 
-* 模板文件中引入模板文件如下几种方法：假定项目视图目录是在Core/Apps/Admin/View
+> 模板文件中引入模板文件如下几种方法：假定项目视图目录是在Core/Apps/Admin/View
 1. 模板文件a：Demo1/a.html
 2. 模板文件c：Demo1/c.html
 3. 模板文件b：Demo2/b.html
 
-#模板文件a中引入模板文件b#   
+> 模板文件a中引入模板文件b
 
 ```
 1. <?php include T("Demo2/b")?> （如果引入模板文件c：<?php include T("Demo3/c")?> ）
@@ -258,7 +258,7 @@ interface BaseInterface {
 4. <include file="/Core/Apps/Admin/View/Demo2/b.html" />
 ```
 
-TIPS：   
+注意事项:   
 1. 模板文件含变量均会做处理。
 2. include标签使用<include file="" />不要使用<include file=""></include> 
 
